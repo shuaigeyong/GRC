@@ -1,0 +1,29 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Apr 8, 2023, 5:55:11 PM
+    Author     : USER
+*/
+
+.seatsel{
+    margin-right: 9.3px;
+}
+.s1{
+    display: inline-block;
+    width: 25px;
+    margin-right: 2px;
+    margin-bottom: 5px;
+    
+}
+.s2{
+    display:inline-block;
+    width: 25px;
+    height: 25px;
+    margin-right:5px;
+    margin-bottom:5px;
+    text-align: center;
+    line-height:25px;
+    
+}

@@ -1,0 +1,366 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 4 Mar 2023, 8:57:31 pm
+    Author     : zheng
+*/
+
+@charset "utf-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Tilt Neon';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../images/signup_background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 100%;
+    height: 730px;
+    overflow: hidden;
+}
+
+#container{
+   position: absolute;
+   width: 75%;
+}
+
+.title{
+    display: flex;
+}
+
+.form-title{
+    color: #fff;
+    font-family: 'Nunito Sans';
+    font-size: 38px;
+    font-weight: bolder;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    margin-bottom: 80px;
+}
+
+label{
+    position: absolute;
+    height: 100%;
+    top: -10px;
+    left: 0;
+    color: darkgray;
+    font-size: 18px;
+    cursor: text;
+    transition-duration: 0.4s;
+}
+
+span.star{
+    position: absolute;
+    color: red;
+    font-size: 10px;
+    transition-duration: 0.1s;
+}
+
+i{
+    position: absolute;
+    top: 0;
+    right: 15px;
+    color: darkgray; 
+    font-size: 20px;
+}
+
+.info{
+    position: relative;
+    margin-bottom: 5px;
+    border-bottom: 3px solid #38FFFC;
+}
+
+.info input{
+    font-size: 20px;
+    width: 100%;
+    padding-bottom: 10px;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    background: transparent;
+}
+
+.row-1{
+    margin-bottom: 80px;
+}
+
+.row-2{
+    margin-bottom: 80px;
+}
+
+.form-submit input{
+    padding: 7px 32px;
+    color: #000;
+    font: bolder 23px Poppins;
+    letter-spacing: 1px;
+    border: 1px solid #38FFFC;
+    border-radius: 8px;
+    background-color: #38FFFC;
+    cursor: pointer;
+    margin-top: 50px;    
+    transition-duration: 0.5s;
+}
+
+.form-submit input:hover{
+    background-color: #000;
+    color: #38FFFC;
+}
+
+.form-submit input:active{
+    transform: scale(0.98);
+}
+
+.info input:focus ~ label,
+.info input:valid ~ label{
+    top: -33px;
+    font-size: 16px;
+}
+
+.info input:focus ~ label .star,
+.info input:valid ~ label .star{
+    color: transparent;
+}
+
+.row-1, .row-2{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.row-1 .info, .row-2 .info{
+    flex-basis: 45%;
+}
+
+#error_message_1{
+    color: red;
+    position: absolute;
+    top: 45px;
+}
+
+#error_message_2{
+    color: red;
+    position: absolute;
+    top: 45px;
+}
+
+#error_message_3{
+    color: red;
+    position: absolute;
+    top: 45px;
+}
+
+#error_message_4{
+    color: red;
+    position: absolute;
+    top: 45px;
+}
+
+#psd-requirements{
+    color: #ffffff;
+}
+
+#psd-requirements p{
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.invalid, .valid{
+    line-height: 2;
+    margin-left: 30px;
+}
+
+.requirement{
+    color: #38FFFC;
+}
+
+/* Add a checkmark when the requirements are right */
+.valid:before{
+    position: absolute;
+    left: 0;
+    content: "\2714";
+    font-weight: bolder;
+    color: #B5f63d;
+}
+
+/* Add an "x" when the requirements are wrong */
+.invalid:before{
+    position: absolute;
+    left: 0;
+    content: "\2716";
+    color: #38FFFC;
+}
+
+.row-3{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sign-in{
+    position: relative;
+    top: 25px;
+    color: #fff;
+    font-size: 19px;
+}
+
+.sign-in div{
+    color: darkgray;
+    opacity: 0.8;
+}
+
+.sign-in a{
+    position: relative;
+    left: 85px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 19px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#dice, #eye-1, #eye-2, #eye-3, #eye-4{
+    cursor: pointer;
+}
+
+/* Animation */
+#container .title{
+    opacity: 0;
+    animation: fadeUp 0.8s ease-out forwards;
+    animation-delay: 0.5s;
+}
+
+#container .row-1{
+    opacity: 0;
+    animation: fadeUp 0.8s ease-out forwards;
+    animation-delay: 0.8s;
+}
+
+#container .row-2{
+    opacity: 0;
+    animation: fadeUp 0.8s ease-out forwards;
+    animation-delay: 1.1s;
+}
+
+#container #psd-requirements p, #container #psd-requirements #letter, 
+#container #psd-requirements #capital, #container #psd-requirements #number, 
+#container #psd-requirements #length{
+    opacity: 0;
+    animation: fade 0.8s ease-out forwards;
+    animation-delay: 1.4s;
+}
+
+#container #psd-requirements #letter{
+    animation-delay: 1.7s;
+}
+
+#container #psd-requirements #capital{
+    animation-delay: 2.1s;
+}
+
+#container #psd-requirements #number{
+    animation-delay: 2.4s;
+}
+
+#container #psd-requirements #length{
+    animation-delay: 2.7s;
+}
+
+#container .row-3{
+    opacity: 0;
+    animation: fadeUp 0.8s ease-out forwards;
+    animation-delay: 3.0s;
+}
+
+@keyframes fadeUp {
+    0% {
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Mobile Size */
+@media screen and (max-width: 1246px) {  
+    body {
+        overflow: auto;
+    }
+}
+
+@media screen and (max-width: 842px){
+    body{
+        display: block;
+        height: 900px;
+    }
+    
+    #container{
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+    .row-1, .row-2{
+        display: block;
+        margin-bottom: 80px;
+    }
+    
+    .info{
+        margin-bottom: 80px;
+    }
+    
+    #error-message-1, #error-message-2, 
+    #error-message-3, #error-message-4{
+        font-size: 15px;
+    }
+
+    .info input{
+        font-size: 17px;
+    }
+    
+    #psd-requirements{
+        font-size: 15px;
+    }
+    
+    .form-submit input{
+        font-size: 19px;         
+    }
+}
+
+@media screen and (max-width: 540px){
+    body{
+        height: 1000px;
+    }
+    
+    .row-3{
+        display: block;
+    }
+    
+    .sign-in{
+        margin-top: 20px;
+    }
+    
+    .sign-in a{
+        left: 0;
+    }
+}

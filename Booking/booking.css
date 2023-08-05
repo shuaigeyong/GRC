@@ -1,0 +1,238 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 5 Mar 2023, 1:23:33 pm
+    Author     : 60174
+*/
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    padding-top: 47px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.8); /* Fallback color */
+    z-index: 30;
+}
+
+/* Modal Content */
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: auto;
+    width: 31.5%;
+/*    margin: auto;
+    padding: 20px; 
+    width: 31.5%;*/
+}
+
+/* The Close Button */
+.close {  
+    position: absolute;
+    left: 69%;
+    top: 50px;
+    color: white;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.close:hover {
+    color: rgb(180,180,180);
+    cursor: pointer;
+}
+
+div.classic {
+    display: block;
+    position: relative; 
+    width: 100%;
+    margin: auto;
+    background-color: rgb(60, 60, 60);
+    color: white;   
+    padding: 15px 0;
+    text-align: center;
+    font: bold 20px sans-serif; 
+    cursor: pointer;
+    z-index: 2;
+    border: 1px solid grey;
+}
+
+.arrow::before, .arrow::after {
+    position: absolute;
+    left: 88%;
+    top: 25px;
+    content: '';
+    display: block;
+    width: 12px;
+    height: 2px;
+    background-color: white; 
+    transition: 0.8s;
+}
+
+.arrow::before {
+    transform: rotate(-45deg);
+}
+
+.arrow::after { 
+    position: absolute;
+    left: 89.5%;
+    top: 25px;
+    transform: rotate(45deg);
+}
+
+.active::before {
+    transform: rotate(45deg);
+}
+
+.active::after {
+    transform: rotate(-45deg);
+}
+
+#booking {
+    width: 100%;
+}
+
+.dropdown {
+    position: relative;
+    margin: auto;
+    min-width: 100%;
+    max-height: 100vh;
+    color: white;
+    font: bold 20px sans-serif;
+    background-color: black;
+    border: 1px solid grey;
+    border-top: none;
+    overflow: hidden;
+    transition: max-height 0.8s;
+}
+
+.dropdown-active {
+    max-height: 0vh;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+}
+
+.flex1 {
+    flex-basis: 65%;
+}
+
+.flex2 {
+    flex-basis: 35%;
+}
+
+.pos1, .pos2 {
+    padding: 30px 0;
+}
+
+.button1 {
+    color: white;
+    background-color: rgba(0,0,0,0);
+    border: none;
+    cursor: pointer;
+    transform: scaleX(4) scaleY(1.7);
+}
+
+.button2 {
+    color: white;
+    background-color: rgba(0,0,0,0);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transform: scale(2.5);
+}
+
+.button1:hover, .button2:hover {
+    color: rgb(180,180,180);        
+}
+
+#adultQty, #childQty {   
+    font: bold 15px sans-serif;
+    text-align: center;
+    color: red;
+    background-color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: text;
+    transform: scaleX(1.3) scaleY(2);
+    margin: auto;
+}
+
+.ticketQty {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.flex3 {
+    flex-basis: 25%;
+}
+
+.flex4 {
+    flex-basis: 45%;
+    z-index: 2;
+}
+
+.flex5 {
+    flex-basis: 25%;
+}
+
+.foot-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.totalPrice {
+    padding-top: 5px;
+    color: white;
+    font: 25px sans-serif;
+}
+
+#total {
+    position: relative;
+    top: -3px;
+    font: bold 15px sans-serif;
+    text-align: left;
+    color: white;
+    background-color: rgba(0,0,0,0);
+    border: none;  
+    cursor: text;
+    transform: scaleX(1.6) scaleY(1.7);
+    margin-left: 20px;
+}
+
+#continue {
+    color: black;
+    background-color: #38FFFC;
+    font: bold 20px sans-serif;
+    margin-top: 5px;
+    padding: 10px 10%;
+    border-radius: 6px;
+    border-top: none;
+    border-left: none;
+    transition: all 0.5s;
+}
+
+#continue:hover {
+    color: #38FFFC;
+    background-color: black;
+    border: 1px solid #38FFFC;
+    cursor: pointer;
+}

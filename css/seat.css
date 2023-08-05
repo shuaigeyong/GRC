@@ -1,0 +1,278 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 6 Apr 2023, 5:11:25 pm
+    Author     : tcy
+*/
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400);
+body{
+    /*font-family: "Gill Sans", sans-serif;*/
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    /*font-weight: bold;*/
+    /*color:whitesmoke;*/
+    /*color: #38FFFC;*/
+    color: orange;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*justify-content: center;*/
+    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../image/signup_background.png') ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:center;
+    width: 100%;
+    height: 1000px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.material-symbols-rounded {
+  font-family: "Material Symbols Rounded";
+  font-size: 25px;
+  vertical-align: middle;
+  display: inline-block;
+  transform: scale(1.5);
+  width:40px;
+  height:35px;
+  text-align: center;
+  /*cursor: pointer;*/
+ 
+}
+
+.select3{
+    width:110px;
+}
+.seat:hover{
+    /*font-size:300px;*/ 
+    filter: brightness(100%);
+    transform: scale(1.7);
+    
+}            
+            
+.available {
+  color: yellow;
+  filter: brightness(70%);
+}
+.selected{
+    color: #38FFFC;
+}
+.disavailable {
+  color: red;
+  pointer-events: none;
+ 
+}
+.unavailable{
+    color:gray;
+    pointer-events: none;
+}
+#seat_area{
+    margin: auto;
+    perspective:1000px;
+}
+.seatbar{
+    position: relative;
+    top:50px;
+}
+.guide::after {
+    content: '1212';
+    position: absolute;
+    opacity: 0;
+    color:red;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+select {
+  width: 60px;
+  font-size:16px;
+  padding: 7px 10px;
+  /*color:white;*/
+  color:orange;
+  font-weight: bold;
+  border: 2px solid white;
+  border-radius: 4px;
+  background-color: transparent;
+   /*opacity: 0.5;*/
+  position:relative;
+  top:60px;
+}
+label{
+    color:orange;
+}
+#ld{
+   position:relative;
+  top:60px; 
+}
+#lh{
+    position:relative;
+  top:60px; 
+}
+input[type=date]{
+    position:relative;
+  top:60px;
+    width: 120px;
+  font-size:16px;
+  border:  2px solid white;
+  border-radius: 4px;
+  padding: 7px 10px;
+    /*color:white;*/
+    color:orange;
+    background-color: transparent;
+}
+input[type=date]::-webkit-calendar-picker-indicator {
+    /*border: 1px solid #ccc;*/
+    border-radius: 2px;
+    /*box-shadow: inset 0 1px #fff, 0 1px #eee;*/
+    background-color: #eee;
+    background-color:orange;
+    
+    /*background-image: -webkit-linear-gradient(top, #f0f0f0, #e6e6e6);*/
+    color: #666;
+    /*color:orange;*/
+}
+/*input[type=date]::webkit-calender-picker-indicator{
+    color:red;
+    background-color: red;
+}*/
+input[type=checkbox] {
+    display: none;
+}
+.radiotime{
+    display:none;
+}
+
+input[type=checkbox] + .material-symbols-rounded {
+    cursor: pointer;
+}
+input[type=checkbox]:checked + .available {
+    color: #38FFFC;
+    transform: scale(1.7);
+}
+input[type=date]{
+    border:none;
+}
+select{
+    border:none;
+}
+.selecttime{
+    width:120px;
+}
+option{
+    background-color: black;
+    /*color:white;*/
+}
+figure{
+  
+}
+figcaption{
+    display:inline;
+    color:white;
+}
+.btnContinue{
+    background-color: rgb(200,0,0);
+    border-radius: 15px;
+    border-color: rgb(200,0,0);
+    color:whitesmoke;
+    height:30px;
+    width:200px;
+    margin: auto;
+    filter: brightness(50%);
+}
+.btnContinue:hover{
+    cursor: pointer;
+}
+.days, .time {
+  background: #34495e;
+  text-transform: uppercase;
+  font-size: 0.6em;
+  text-align: center;
+  
+/*  background-color: #38FFFC;
+      color:black;
+      font-weight: bold;*/
+}
+.timetable{
+/*    border:2px solid white;*/
+    border-collapse: collapse;
+    /*background: #34495e;*/
+    color: #efefef;
+/*    color: #38FFFC;*/
+     font-size: 0.6em;
+     font-family: 'Open Sans', Helvetica;
+}
+.timetable tr:nth-child(2n) {
+  background: #eff0f1;
+  background-color: transparent;
+}
+.timetable tr:nth-child(2n+3) {
+  background: #fff;
+   background-color: transparent;
+}
+.timetable td{
+    /*border:2px solid white;*/
+    padding: 1em;
+  width: 10em;
+  /*border:1px solid gray;*/
+  
+  
+  
+}
+.timeunselected{
+    background-color: green;
+      background-color: #4dccc6;
+/*      background-color: #38FFFC;
+      color:black;*/
+      font-weight: bold;
+/*background-image: linear-gradient(315deg, #4dccc6 0%, #96e4df 74%);*/
+/*background-image: url('img/0183635ad83f42a801213867afc7e8.jpg@1280w_1l_2o_100sh.jpg');
+background-size: cover;
+    background-position: center;
+     filter: brightness(70%);*/
+  /*line-height: 42px;*/
+  padding: 0;
+  border: none;
+}
+.timeselected{
+    background-color: blue;
+}
+input[type=radio]:checked {
+    color: red;
+    background-color:red ;
+    transform: scale(1.7);
+}
+.radiotime{
+    width:100%;
+    height:100%;
+    padding:100%;
+    
+}
+#screen{
+    height:70px;
+    margin:50px 0;
+    width:100%;
+    background-color: #fff;
+    transform: rotateX(-45deg);
+    box-shadow: 0 35px 100px rgba(255,255,255,0.75);
+    animation:screenlight 2s infinite;
+}
+@keyframes screenlight {
+  0%{box-shadow: 0 35px 100px rgba(255,255,255,0.75);}
+  30%{box-shadow: 0 35px 100px rgba(255,255,255,1);}
+  40%{box-shadow: 0 35px 100px rgba(255,255,255,0.75);}
+  60%{box-shadow: 0 35px 100px rgba(255,255,255,0.95);}
+  100%{box-shadow: 0 35px 100px rgba(255,255,255,0.75);}
+}
+
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  background-color: orange;
+  color:white;
+}
+
+input[type="date"]::-webkit-datetime-edit-month-field:focus,
+input[type="date"]::-webkit-datetime-edit-day-field:focus,
+input[type="date"]::-webkit-datetime-edit-year-field:focus {
+  background-color: gray;
+  color:orange;
+  outline: none;
+}

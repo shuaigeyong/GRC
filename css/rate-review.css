@@ -1,0 +1,311 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 8 Apr 2023, 9:14:32 pm
+    Author     : 60174
+*/
+
+body {
+    background-color: black;
+    color: white;       
+}
+
+.header {
+    font: bold 20px sans-serif;
+    width: 100%;
+    position: relative;
+    top: 200px;
+    margin-left: 23%;
+}
+
+.arrow {
+    border: 1px solid rgba(0,0,0,0);
+    border-radius: 100%;
+    margin-left: 1%;
+    padding: 11px 0.8%;
+    transition: all 0.2s;
+}
+
+.arrow:hover {
+    cursor: pointer;
+    border: 1px solid rgba(0,0,0,0);
+    background-color: rgba(255,255,255,0.3);
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    margin-top: 30px;
+    flex-wrap: wrap;
+    position: relative;
+    top: 200px;    
+}
+
+.first-layer {
+    display: flex;
+    width: 80%;
+    flex: 1;
+}
+
+.left, .right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-basis: 0;
+    flex-grow: 1;
+    position: relative;
+}
+
+.review-box {
+    width: 60%;
+    flex-grow: 1;
+}
+
+.right {
+    flex-grow: 2;
+}
+
+.left-arrange {
+    position: absolute;
+    right: 15%;
+}
+
+.right-arrange {
+    position: relative;
+    left: 0%;
+    width: 100%;
+}
+
+.progressBar {
+    width: 85%;
+    margin: 12px 0;
+}
+
+.progress-label-left {
+    position: relative;
+    top: -4px;
+}
+
+.progress {
+    height: 10px;
+    width: 90%;
+}
+
+.avgRate {
+    text-align: center;
+    font: 50px Calibri;
+}
+
+.total-review {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.progress-label-left {
+    float: left;
+    margin-right: 0.5em;
+    line-height: 1em;
+}
+
+.progress-label-left {
+    float: left;
+    margin-right: 0.5em;
+    line-height: 1em;
+}
+
+.progress-label-right {
+    float: right;
+    margin-left: 0.3em;
+    line-height: 1em;
+}
+
+.star-light {
+    color:#e9ecef;
+}
+
+.reviewbtn {
+    color: black;
+    background-color: #38FFFC;
+    font: bold 15px sans-serif;
+    margin-top: 5px;
+    padding: 10px 5%;
+    border-radius: 6px;
+    border: none;
+    transition: all 0.5s;
+}
+
+.reviewbtn:hover {
+    color: #38FFFC;
+    border: 1px solid #38FFFC;
+    background-color: black;
+    cursor: pointer;
+}
+
+.close {
+    color: white;
+}
+
+.close:hover {
+    color: white;
+}
+
+.modal-content {
+    color: white;
+    background-color: black;
+    border: 1px solid grey;
+}
+
+#user_review {
+    background-color: black;
+    border: 1px solid grey;
+    color: white;
+}
+
+
+/*.headshot {
+    font: 30px Arial;
+    background-color: #FF4B4B;
+    border-radius: 50%;
+    width: 50%;
+}
+
+.review-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    position: relative;  
+}
+
+.user-name {
+    
+}*/
+
+.rating-date {
+    color: white;
+}
+
+.review-container {
+    padding: 10px 0;
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #ddd;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.headshot {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: #dc3545;
+    /*background-color: #2967B9;*/
+    color: #fff;
+    border-radius: 50%;
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+
+.user-name {
+    font-weight: bold;
+    padding-top: 5px;
+}
+
+.rating-info {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.stars {
+    color: #f0ca45;
+}
+
+.star-light {
+    color: #ccc;
+}
+
+.rating-date {
+    margin-left: auto;
+    color: #999;
+    font-size: 14px;
+    font-style: italic;
+}
+
+.review-info {
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.rating-container{
+    margin-bottom: 300px;
+}
+
+/*--------------------------  Delete Button  ---------------------------*/
+.btnBackground {
+    width: 4.5%;
+    margin-left: auto;
+    padding-top: 10px;
+    border: 1px solid rgba(0,0,0,0);
+    border-radius: 100%;
+    transition: all 0.2s;
+}
+
+.btnBackground:hover {
+    cursor: pointer;
+    border: 1px solid rgba(0,0,0,0);
+    background-color: rgba(255,255,255,0.3);
+}
+
+#deletebtn {
+    color: #bbb;
+    font-size: 16px;
+    margin-left: auto;
+    padding-top: 10px;
+    cursor: pointer;
+}
+
+#delete-review {
+    display: none;
+    position: absolute;
+    right: 20.3%;
+    top: 245px;
+    background-color: white;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+#delete-review:hover {
+    background-color: #CDCDCD;
+    cursor: pointer;
+}
+
+/*--------------------------  All Reviews  ---------------------------*/
+.all-reviews {
+    overflow-y: auto;
+    height: 500px;
+}
+
+.all-reviews::-webkit-scrollbar {
+    background-color: var(--text-color); 
+}
+
+.all-reviews::-webkit-scrollbar-thumb {
+    background-color: var(--main-color);
+}
+
+.display {
+    display: none;
+}

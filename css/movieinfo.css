@@ -1,0 +1,208 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 4 Apr 2023, 8:48:04 pm
+    Author     : zheng
+*/
+
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@700&family=Oswald:wght@700&family=Poppins:wght@100;200;300;400;500;600;700;900&family=Roboto:wght@500;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html::-webkit-scrollbar{
+    width: 0.5rem;
+    background-color: #020307;
+}
+
+html::-webkit-scrollbar-thumb{
+    background-color: #38FFFC;
+    border-radius: 5rem;
+}
+
+body{
+    font-family: Roboto;
+    margin-top: 100px;
+    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../images/signup_background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.container{
+    margin-top: 100px;
+    position: relative;
+    width: 80%;
+}
+
+.flow{
+    position: relative;
+    bottom: 30px;
+    display: flex;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 30px;
+}
+
+.back-btn{
+    color: #fff;
+    margin-right: 20px;
+    background-color: transparent;
+    border: none;
+    padding-bottom: 25px;
+    display: block;
+}
+
+.back-btn a{
+    font-size: 15px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.back-btn a:hover{
+    text-decoration: none;
+    color: #38FFFC;
+}
+
+.container-box{
+    display: flex;
+}
+
+.container-body{
+    position: relative;
+    margin-left: 12%;
+    color: #fff;
+}
+
+.body-title{
+    font-family: Oswald;
+    font-size: 40px;
+    margin-top: -15px;
+    margin-bottom: 25px;
+}
+
+.body-detail pre{
+    color: #fff;
+    font-family: Roboto;
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+
+.body-detail pre span.value:before{
+    position: relative;
+    margin-right: 18px;
+    content: ':';
+}
+
+.body-detail pre span.value{
+    position: absolute;
+    left: 30%;
+}
+
+.synopsis p.label{
+    font-family: Oswald;
+    margin-top: 30px;
+    font-size: 23px;
+}
+
+.synopsis p.value{
+    margin-top: 10px;
+    font-size: 17px;
+    text-align: justify;
+}
+
+/* Video */
+.video{
+    position: relative;
+    top: 100px;
+    left: 30%;
+}
+
+/* Button */
+.button{
+    position: absolute;
+    right: 20%;
+}
+
+.button a{
+    color: #38FFFC !important;
+    text-decoration: none !important;
+    padding: 10px 25px;
+    font: bolder 19px Poppins;
+    letter-spacing: 1px;
+    border: none;
+    border-radius: 8px;
+    background-color: #000 !important;
+    border: 1px solid #38FFFC;
+    cursor: pointer;
+    transition-duration: 0.5s;
+}
+
+.button a:hover{
+    color: #000 !important;
+    background-color: #38FFFC !important;
+    border: 1px solid #000;
+}
+
+/* Animation */
+.container-box {
+    opacity: 0;
+    animation: fadeUp 0.8s ease-out forwards;
+    animation-delay: 0.5s;
+}
+
+.container .flow{
+    opacity: 0;
+    animation: fadeUp 0.8s ease-out forwards;
+    animation-delay: 0.8s;
+}
+
+.container-box .container-image {
+    opacity: 0;
+    animation: fadeUp 0.8s ease-out forwards;
+    animation-delay: 1.1s;
+}
+
+.container-box .body-title {
+    opacity: 0;
+    animation: fadeUp 0.8s ease-out forwards;
+    animation-delay: 1.4s;
+}
+
+.container-box .body-detail pre,
+.container-box .body-detail .synopsis {
+    opacity: 0;
+    animation: fadeUp 0.8s ease-out forwards;
+    animation-delay: 1.7s;
+}
+
+.container-box .body-detail .synopsis {
+    animation-delay: 2.2s;
+}
+
+.content-1{
+    opacity: 0;
+}
+
+.content-1.visible{
+    animation: fadeUp 0.8s ease-out forwards;
+}
+
+@keyframes fadeUp {
+    0% {
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

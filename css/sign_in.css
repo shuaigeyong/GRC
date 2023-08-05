@@ -1,0 +1,340 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 5 Mar 2023, 4:58:03 pm
+    Author     : zheng
+*/
+
+@charset "utf-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Tilt Neon';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../images/signup_background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 100%;
+    height: 730px;
+    overflow: hidden;
+}
+
+#container{
+    position: absolute;
+    width: 80%;
+}
+
+.form h1{
+    color: #fff;
+    font-family: 'Nunito Sans';
+    font-size: 38px;
+    font-weight: bolder;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    margin-bottom: 80px;
+}
+
+.box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.slideshow{
+    flex-basis: 55%;
+}
+
+.form{
+    flex-basis: 40%;
+    width: 50%;
+}
+
+.form label{
+    position: absolute;
+    height: 100%;
+    top: -10px;
+    left: 0;
+    color: darkgray;
+    font-size: 18px;
+    cursor: text;
+    transition-duration: 0.4s;
+}
+
+span.star{
+    position: absolute;
+    color: red;
+    font-size: 10px;
+    transition-duration: 0.1s;
+}
+
+.info{
+    position: relative;
+    margin-bottom: 60px;
+    border-bottom: 3px solid #38FFFC;
+}
+
+.info input{
+    font-size: 20px;
+    width: 100%;
+    padding-bottom: 10px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: transparent;
+}
+
+.info input:focus ~ label,
+.info input:valid ~ label{
+    top: -33px;
+    font-size: 16px;
+}
+
+.info input:focus ~ label .star,
+.info input:valid ~ label .star{
+    color: transparent;
+}
+
+i{
+    position: absolute;
+    top: 0;
+    right: 15px;
+    color: darkgray; 
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#error-message-1{
+    position: absolute;
+    top: 45px;
+    color: red;
+}
+
+#error-message-2{
+    position: absolute;
+    top: 45px;
+    color: red;
+}
+
+/* Remember checkbox */
+.form .checkbox label{
+    position: relative;
+    left: 15px;
+    top: 0;
+    cursor: pointer;
+}
+
+.form .checkbox a{
+    position: absolute;
+    right: 0;
+    color: darkgray;
+    font-size: 18px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Sign in button */
+.form-submit input{
+    padding: 7px 32px;
+    color: #000;
+    font: bolder 23px Poppins;
+    letter-spacing: 1px;
+    border: 1px solid #38FFFC;
+    border-radius: 8px;
+    background-color: #38FFFC;
+    cursor: pointer;
+    margin-top: 50px;    
+    margin-bottom: 50px;
+    transition-duration: 0.5s;
+}
+
+.form-submit input:hover{
+    background-color: #000;
+    color: #38FFFC;
+}
+
+.form-submit input:active{
+    transform: scale(0.98);
+}
+
+/* Sign up button */
+.signup-btn div{
+    color: #fff;
+    font: 25px Poppins;
+    margin-bottom: 20px;
+}
+
+.signup-btn a{
+    color: #38FFFC;
+    text-decoration: none;
+    padding: 10px 25px;
+    font: bolder 19px Poppins;
+    letter-spacing: 1px;
+    border: none;
+    border-radius: 8px;
+    background-color: #000;
+    border: 1px solid #38FFFC;
+    cursor: pointer;
+    transition-duration: 0.5s;
+}
+
+.signup-btn a:hover{
+    color: #000;
+    background-color: #38FFFC;
+    border: 1px solid #000;
+}
+
+/* Animation */
+.box .slideshow label {
+    opacity: 0;
+    animation: fade-in 5s ease-out forwards;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+#slide1 {
+    animation-delay: 0s;
+}
+
+#slide2 {
+    animation-delay: 1.6s;
+}
+
+#slide3 {
+    animation-delay: 3.2s;
+}
+
+#slide4 {
+    animation-delay: 2.4s;
+}
+
+#slide5 {
+    animation-delay: 0.8s;
+}
+
+.box .form h1{
+    opacity: 0;
+    animation: fadeUp 0.8s ease-out forwards;
+    animation-delay: 4s;
+}
+
+.box .form #child1{
+    opacity: 0;
+    animation: fadeUp 0.8s ease-out forwards;
+    animation-delay: 4.3s;
+}
+
+.box .form #child2{
+    opacity: 0;
+    animation: fadeUp 0.8s ease-out forwards;
+    animation-delay: 4.6s;
+}
+
+.box .form .checkbox{
+    opacity: 0;
+    animation: fadeUp 0.8s ease-out forwards;
+    animation-delay: 4.9s;
+}
+
+.box .form .form-submit{
+    opacity: 0;
+    animation: fadeUp 0.8s ease-out forwards;
+    animation-delay: 5.2s;
+}
+
+.box .form .signup-btn div, .box .form .signup-btn a{
+    opacity: 0;
+    animation: fadeUp 0.8s ease-out forwards;
+    animation-delay: 5.5s;
+}
+
+.box .form .signup-btn a{
+    animation-delay: 6.1s;
+}
+
+@keyframes fadeUp {
+    0% {
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Media Screen */
+@media screen and (max-width: 1246px) {
+    body {
+        overflow: auto;
+    }
+}
+
+@media screen and (max-width: 1050px){
+    .box{
+        display: block;
+    }
+
+    .slideshow{
+        display: none;
+    }
+    
+    .form{
+        width: 100%;
+    }
+    
+}
+
+@media screen and (max-width: 574px) {       
+    .form h1{
+        font-size: 30px;
+    }
+    
+    .form label, .form .checkbox a, #error-message-1, #error-message-2{
+        font-size: 15px;
+    }
+    
+    span.star{
+        font-size: 7px;
+    }
+    
+    .info input{
+        font-size: 17px;
+    }
+    
+    .info input:focus ~ label,
+    .info input:valid ~ label{
+        top: -28px;
+        font-size: 13px;
+    }
+    
+    .form-submit input{
+        font-size: 17px;
+    }
+    
+    .signup-btn div{
+        font-size: 20px;
+    }
+    
+    .signup-btn a{
+        font-size: 14px;
+    }
+}

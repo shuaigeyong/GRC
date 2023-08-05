@@ -1,0 +1,367 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 9 Apr 2023, 10:31:15 pm
+    Author     : zheng
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@700&family=Oswald:wght@700&family=Poppins:wght@100;200;300;400;500;600;700;900&family=Roboto:wght@500;900&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+:root{
+    --main-color: #38FFFC;
+    --text-color: #020307;
+    --bg-color: #fff;
+    --primary-white: rgb(240, 240, 240);
+}
+
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 100px;
+    transition: 0.5s;
+}
+
+header.shadow{
+    background-color: #000;
+}
+
+.logo{
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+}
+
+.logo .bx{
+    font-size: 24px;
+    color: #38FFFC;
+}
+
+.navbar{
+    display: flex;
+    column-gap: 5rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.navbar li{
+    position: relative;
+}
+
+.navbar a{
+    font-size: 1rem;
+    font-weight: 500;
+    color: #fff;
+}
+
+.navbar a::after{
+    content: '';
+    width: 0;
+    height: 2px;
+    background: #38FFFC;
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    transition: 0.4s all linear;
+}
+
+.navbar a:hover::after, .navbar .home-active::after{
+    width: 100%;
+}
+
+#menu-icon{
+    position: relative;
+    left: -23px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1000001;
+    display: none;
+}
+
+header .search-bar {
+    position: relative;
+    left: -50px;
+}
+
+header .search-bar input{
+    padding: 3px 10px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    background: rgb(255, 255, 255, .3);
+    color: #fff;
+    margin-right: 10px;
+}
+
+header .search-bar input::placeholder{
+    color: #fff;
+}
+
+header .search-bar .search{
+    position: absolute;
+    width: 320px;
+    height: 270px;
+    right: 0;
+    top: 40px;
+    z-index: 99999;
+    overflow-y: auto; 
+}
+
+header .search-bar .search::-webkit-scrollbar{
+    width: 5px;
+    background: rgb(255, 255, 255, .3);
+    border-radius: 5px;
+    visibility: hidden;
+}
+
+header .search-bar .search::-webkit-scrollbar-thumb{
+    width: 5px;
+    background: rgb(255, 255, 255, .4);
+    border-radius: 5px;
+    visibility: hidden;
+}
+
+header .search-bar .search:hover::-webkit-scrollbar{
+    visibility: visible;
+}
+
+header .search-bar .search:hover::-webkit-scrollbar-thumb{
+    visibility: visible;
+}
+
+header .search-bar .search .card{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    padding: 3px 0px;
+    text-decoration: none;
+}
+
+header .search-bar .search .card::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgb(255, 255, 255, .1);
+    -webkit-backdrop-filter: blur(5px);
+    border-radius: 5px;
+    z-index: 1;
+}
+
+header .search-bar .search .card img{
+    width: 28px;
+    height: 90%;
+    border-radius: 2px;
+    margin-left: 8px
+}
+
+header .search-bar .search .card .cont{
+    margin-left: 10px;
+    color: #fff;
+}
+
+header .search-bar .search .card .cont h3{
+    font-size: 15px;
+    line-height: 25px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 250px;
+}
+
+header .search-bar .search .card .cont p{
+    font-size: 10px;
+    color: rgb(255, 255, 255, .8);
+}
+
+header .search-bar .search .card .cont span{
+    color: yellow;
+    padding: 0px 3px;
+    font-weight: 500;
+}
+
+.button{
+    padding: 0.7rem 1.4rem;
+    background-color: #38FFFC;
+    color: #000;
+    font-weight: 700;
+    border-radius: 0.5rem;
+    border: 1px solid #38FFFC;
+}
+
+.button:hover{
+    background-color: transparent;
+    color: #38FFFC;
+}
+
+.profile-image{
+    cursor: pointer !important;
+    height: 50px !important;
+    width: 50px !important;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.headshot {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer !important;
+    height: 50px !important;
+    width: 50px !important;
+    background-color: #dc3545;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 20px;
+}
+
+.container-image{
+    color: #38FFFC;
+    position: fixed;
+    right: 70px;
+    top: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    z-index: 10001;
+}
+
+.container-image .profile{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #000;
+    padding: 20px;
+    border: 5px solid #38FFFC;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .1); 
+    text-align: center;
+    width: 400px;
+    border-radius: 5px;
+    min-height: 65vh;
+}
+
+.container-image .profile img{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-top: 30px;
+}
+
+.container-image .profile .headshot-big{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 150px;
+    width: 150px;
+    background-color: #dc3545;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 50px;
+    margin-top: 30px;
+}
+
+.container-image .profile h3{
+    margin-top: 35px;
+    font-size: 20px;
+}
+
+.container-image .profile p{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.update-profile-btn{
+    color: #000;
+    background-color: #38FFFC;
+    font-size: 15px;
+    font-weight: bolder;
+    padding: 8px 13px;
+    border: 1px solid #38FFFC;
+    margin-right: 15px;
+    transition-duration: 0.5s;
+}
+
+.logout{
+    color: #38FFFC !important;
+    background-color: #000;
+    font-size: 15px;
+    padding: 8px 13px;
+}
+
+.update-profile-btn:hover{
+    color: #38FFFC;
+    background-color: transparent;
+}
+
+/* Media Screen */
+@media screen and (max-width: 991px) {
+    header{
+        padding: 18px 4%;
+    }
+}
+
+@media screen and (max-width: 774px){
+    header{
+        padding: 12px 4%;
+    }
+    
+    #menu-icon{
+        display: initial;
+        color: #fff;
+    }
+    
+    .navbar{
+        width: 100%;
+        position: absolute;
+        top: -570px;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        background-color: #000;
+        row-gap: 1.4rem;
+        padding: 20px;
+        transition: 0.2s all linear;
+        text-align: center;
+    }
+    
+    .navbar li:hover{
+        background-color: #38FFFC;
+    }
+    
+    .navbar li:hover a{
+        color: #000;
+    }
+    
+    .navbar a::after{
+        display: none;
+    }
+    
+    .navbar.active{
+        top: 100%;
+    }
+}

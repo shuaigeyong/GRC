@@ -1,0 +1,312 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Apr 6, 2023, 12:39:34 AM
+    Author     : USER
+*/
+
+body{
+  margin: 0px;
+  padding: 0px;
+  background-color: #6c757d;
+  overflow: hidden;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+
+}
+
+.clearfix{
+   clear: both;
+}
+
+.logo {
+  margin: 0px;
+  margin-left: 28px;
+  font-weight: bold;
+  color: gold;
+  margin-bottom: 30px;
+  font-size: 46px;
+}
+
+.logo span {
+  color: gold;
+  font-size: 46px;
+}
+
+.sidebar{ 
+  height: 100%;
+  width: 300px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #2d353c;
+  overflow: hidden;
+  transform: 0.5s;
+  padding-top: 30px;
+}
+.sidebar a{
+  padding: 15px 8px 15px 32px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #8b8989;
+  display: block;
+  transform: 0.5s;
+}
+
+.sidebar a:hover{
+  color: rgb(240, 240, 240);
+  background-color: rgb(79, 76, 76);
+}
+
+#main{
+  transition: margin-left .5s;
+  padding: 16px;
+  margin-left: 300px;
+}
+.head{
+  padding: 20px;
+}
+.col-div-6{
+  width: 50%;
+  float: left;
+}
+.dashboard {
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+}
+
+.nav2{
+  display: none;
+}
+
+.col-div-3{
+  width: 25%;
+  float: left;
+}
+.box{
+  width: 85%;
+  height: 100px;
+  background-color: #2d353c;
+  margin-left: 10px;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.box p{
+  font-size: 35px;
+  color: white;
+  font-weight: bold;
+  line-height: 30px;
+  padding-left: 10px;
+  margin-top: 20px;
+  display: inline-block;
+}
+
+.box p span{
+  font-size: 20px;
+  font-weight: 400;
+  color: #e7e1e1;
+
+}
+
+.box-icon{
+  font-size: 40px!important;
+  float: right;
+  margin-top: 35px!important;
+  color: #b1b7ae;
+  padding-right: 10px;
+}
+
+.col-div-8{
+  width: 50%;
+  float: left;
+
+}
+
+.col-div-4{
+  width: 30%;
+  float: left;
+}
+
+.content-box{
+  padding: 20px;
+
+}
+.content-box p {
+  margin: 0px;
+  font-size: 20px;
+  color: #adb5bd;
+ font-weight: 400;
+}
+.content-box p span{
+  float: right;
+  background-color: #00acac;
+  color: #fff;
+  padding: 3px 10px;
+  font-size: 15px;
+  border-radius: 2px;
+}
+
+.box-8, .box-4{
+  width: 120%;
+  background-color:#2d353c ;
+  height: 680px;
+  border-radius: 5px;
+  overflow: auto;
+  padding-top: 0px;
+}
+
+::-webkit-scrollbar{
+      display:none;
+  }
+/*====================*/
+.box-8{
+  margin-left: 15px;
+  width: 190%;
+}
+
+
+.container {
+  perspective: 1000px;
+  margin-bottom: 30px;
+
+}
+
+.checkBox {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: transparent;
+  border: none;
+}
+
+
+.fa-couch {
+  color: yellow; /* 未被勾选时的颜色 */
+  opacity: 0.9;
+  margin-right: 8px;
+  font-size: 30px;
+}
+
+
+.checkBox:checked:not(:disabled) + .fa-couch {
+  color: #38FFFC; /* 勾选且未禁用时的颜色 */
+}   
+
+.seats:nth-of-type(18n+4){
+  margin-right: 18px;
+}
+
+.seats:nth-last-of-type(18n+4) {
+  margin-left: 18px;
+}
+
+.screen{
+  background-color: #fff;
+  height: 120px;
+  width: 750px;
+  display: flex;
+  justify-content: center;
+  margin: 15px 50px;
+  transform: rotateX(-48deg);
+  box-shadow: 0 3px 10px rgba(255, 255, 255, 0.7);
+
+}
+#seat-table{
+   margin-left: 14.5% ;
+    
+}
+
+select{
+  display: inline-block;
+  padding: 9px 6px;
+  margin-left: 10px;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: white;
+  background-color: #7b838a;
+  border: 1px solid #6c757d;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.btn{
+    margin-left: 340px;
+    padding: 9px 18px;
+    
+}
+#sidebar{
+    width: 70px;
+    
+}
+#main{
+    margin-left:70px;
+}
+.logo{
+    visibility: hidden;
+}
+.logo span{
+    visibility: visible;
+    margin-left:-10px;
+}
+
+.icon-a{
+    visibility: hidden;
+}
+
+.icons{
+    visibility: visible;
+    margin-left: -8px
+}
+
+.nav{
+    display:none;
+   
+}
+
+.nav2{
+     display:block;
+}
+
+sidebar{
+    width: 70px;
+}
+.rowlabel{
+ margin-right: 20px;
+ font-size: 16px;
+ float:left;
+ line-height:2px ;
+ width: 10px;
+}
+
+.collabel{
+    font-size: 18px;
+    margin: -8px 10.5px;
+   
+}
+.space{
+    width:35px;
+    display:inline-block;
+}
+
+input[type="date"] {
+  background-color: #7b838a;
+  color: #ffffff;
+  border: 1px solid #444444;
+  padding: 8px;
+  font-size: 16px;
+  outline: none;
+  border-radius: 5px;
+  box-shadow: none;
+
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
+

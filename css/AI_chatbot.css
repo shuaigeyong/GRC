@@ -1,0 +1,183 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 22 Apr 2023, 10:08:43 pm
+    Author     : zheng
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@500;700&family=Ma+Shan+Zheng&family=Oswald:wght@700&family=Poppins:wght@200;300;400;500;600;700;900&family=Roboto:wght@500;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins, sans-serif;
+}
+
+/*html, body{
+    display: grid;
+    height: 100%;
+    place-items: center;
+}*/
+
+::-webkit-scrollbar{
+    width: 5px;
+    border-radius: 25px;
+}
+
+::-webkit-scrollbar-track{
+    background-color: #020307;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: #38FFFC;
+}
+
+.wrapper-1{
+    position: fixed;
+    bottom: 70px;
+    right: 130px;
+    z-index: 10000;
+    width: 370px;
+    background-color: #000;
+    border-radius: 5px;
+    border: none;
+    border-top: 0px;
+}
+
+.wrapper-1 .title{
+    background-color: #38FFFC;
+    color: #000;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 60px;
+    text-align: center;
+    border-bottom: none;
+    border-radius: 5px 5px 0 0;
+}
+
+.wrapper-1 .form{
+    padding: 20px 15px;
+    min-height: 400px;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.wrapper-1 .form .inbox{
+    width: 100%;
+    display: flex;
+    align-items: baseline;
+}
+
+.wrapper-1 .form .user-inbox{
+    justify-content: flex-end;
+    margin: 13px 0;
+}
+
+.wrapper-1 .form .inbox .icon{
+    height: 40px;
+    width: 40px;
+    color: #38FFFC;
+    text-align: center;
+    line-height: 40px;
+    border: 1px solid #38FFFC;
+    border-radius: 50%;
+    font-size: 18px;
+    background-color: #000;
+}
+
+.wrapper-1 .form .inbox .msg-header{
+    max-width: 53%;
+    margin-left: 10px;
+}
+
+.form .inbox .msg-header p{
+    color: #38FFFC;
+    background-color: #000;
+    border: 1px solid #38FFFC;
+    border-radius: 10px;
+    padding: 8px 10px;
+    font-size: 14px;
+    word-break: break-all; /* 在任意字符处换行以适应容器 */
+}
+
+.wrapper-1 .form .user-inbox .msg-header p{
+    color: #000;
+    background-color: #38FFFC;
+}
+
+.wrapper-1 .typing-field{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 60px;
+    width: 100%;
+    background-color: #000;
+    border-top: 1px solid #38FFFC;
+    border-radius: 0 0 5px 5px;
+}
+
+.wrapper-1 .typing-field .input-data{
+    position: relative;
+    height: 40px;
+    width: 335px;
+}
+
+.wrapper-1 .typing-field .input-data input{
+    height: 100%;
+    width: 100%;
+    border: none;
+    padding: 0 80px 0 15px;
+    border-radius: 3px;
+    font-size: 15px;
+    background-color: #fff; 
+}
+
+.typing-field .input-data input:focus{
+    outline: none;
+    border-color: #38FFFC;
+    box-shadow: 0 0 10px #38FFFC;
+}
+
+.input-data input::placeholder{
+    color: #999999;
+    transition: all 0.3s ease;
+}
+
+.input-data input:focus::placeholder{
+    color: #bfbfbf;
+}
+
+.wrapper-1 .typing-field .input-data button{
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    height: 30px;
+    width: 65px;
+    color: #000;
+    font-size: 16px;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    border-radius: 3px;
+    background-color: #38FFFC;
+    border: none;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+}
+
+.wrapper-1 .typing-field .input-data input:valid ~ button{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.typing-field .input-data button:hover{
+    background-color: #41e8e6;
+}
+
+input[type="text"] {
+    word-wrap: break-word;
+    white-space: pre-wrap;
+}
